@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6255F371C755D31002A7530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F361C755D31002A7530 /* AppDelegate.swift */; };
+		E6255F391C755D31002A7530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F381C755D31002A7530 /* ViewController.swift */; };
+		E6255F3C1C755D31002A7530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6255F3A1C755D31002A7530 /* Main.storyboard */; };
+		E6255F3E1C755D31002A7530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6255F3D1C755D31002A7530 /* Assets.xcassets */; };
+		E6255F411C755D31002A7530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6255F3F1C755D31002A7530 /* LaunchScreen.storyboard */; };
+		E6255F4C1C755D31002A7530 /* TouchPainterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F4B1C755D31002A7530 /* TouchPainterTests.swift */; };
+		E6255F571C755D31002A7530 /* TouchPainterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F561C755D31002A7530 /* TouchPainterUITests.swift */; };
+		E6255F6B1C756DD6002A7530 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F691C756DD6002A7530 /* CanvasViewController.swift */; };
+		E6255F6C1C756DD6002A7530 /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6255F6A1C756DD6002A7530 /* CanvasViewController.xib */; };
+		E6255F811C75A079002A7530 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F801C75A079002A7530 /* Mark.swift */; };
+		E6255F831C75A3FD002A7530 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F821C75A3FD002A7530 /* Dot.swift */; };
+		E6255F851C75A48D002A7530 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F841C75A48D002A7530 /* Vertex.swift */; };
+		E6255F871C75A894002A7530 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F861C75A894002A7530 /* Stroke.swift */; };
+		E6255F891C75ACE6002A7530 /* Scribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F881C75ACE6002A7530 /* Scribble.swift */; };
+		E6255F8C1C75ADD6002A7530 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F8B1C75ADD6002A7530 /* CanvasView.swift */; };
+		E6255F901C75B950002A7530 /* CanvasViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F8F1C75B950002A7530 /* CanvasViewGenerator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6255F481C755D31002A7530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6255F2B1C755D31002A7530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6255F321C755D31002A7530;
+			remoteInfo = TouchPainter;
+		};
+		E6255F531C755D31002A7530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6255F2B1C755D31002A7530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6255F321C755D31002A7530;
+			remoteInfo = TouchPainter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6255F331C755D31002A7530 /* TouchPainter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchPainter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6255F361C755D31002A7530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E6255F381C755D31002A7530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E6255F3B1C755D31002A7530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6255F3D1C755D31002A7530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6255F401C755D31002A7530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6255F421C755D31002A7530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6255F471C755D31002A7530 /* TouchPainterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchPainterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6255F4B1C755D31002A7530 /* TouchPainterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPainterTests.swift; sourceTree = "<group>"; };
+		E6255F4D1C755D31002A7530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6255F521C755D31002A7530 /* TouchPainterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchPainterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6255F561C755D31002A7530 /* TouchPainterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPainterUITests.swift; sourceTree = "<group>"; };
+		E6255F581C755D31002A7530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6255F691C756DD6002A7530 /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		E6255F6A1C756DD6002A7530 /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasViewController.xib; sourceTree = "<group>"; };
+		E6255F801C75A079002A7530 /* Mark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		E6255F821C75A3FD002A7530 /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		E6255F841C75A48D002A7530 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		E6255F861C75A894002A7530 /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		E6255F881C75ACE6002A7530 /* Scribble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scribble.swift; sourceTree = "<group>"; };
+		E6255F8B1C75ADD6002A7530 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		E6255F8F1C75B950002A7530 /* CanvasViewGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewGenerator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6255F301C755D31002A7530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6255F441C755D31002A7530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6255F4F1C755D31002A7530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6255F2A1C755D31002A7530 = {
+			isa = PBXGroup;
+			children = (
+				E6255F351C755D31002A7530 /* TouchPainter */,
+				E6255F4A1C755D31002A7530 /* TouchPainterTests */,
+				E6255F551C755D31002A7530 /* TouchPainterUITests */,
+				E6255F341C755D31002A7530 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6255F341C755D31002A7530 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F331C755D31002A7530 /* TouchPainter.app */,
+				E6255F471C755D31002A7530 /* TouchPainterTests.xctest */,
+				E6255F521C755D31002A7530 /* TouchPainterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6255F351C755D31002A7530 /* TouchPainter */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F361C755D31002A7530 /* AppDelegate.swift */,
+				E6255F381C755D31002A7530 /* ViewController.swift */,
+				E6255F7F1C75A05A002A7530 /* Composite Prototype Iterator */,
+				E6255F881C75ACE6002A7530 /* Scribble.swift */,
+				E6255F8E1C75B92F002A7530 /* Factory Method */,
+				E6255F681C756C36002A7530 /* CanvasViewController */,
+				E6255F8A1C75ADBE002A7530 /* Views */,
+				E6255F3A1C755D31002A7530 /* Main.storyboard */,
+				E6255F3D1C755D31002A7530 /* Assets.xcassets */,
+				E6255F3F1C755D31002A7530 /* LaunchScreen.storyboard */,
+				E6255F421C755D31002A7530 /* Info.plist */,
+			);
+			path = TouchPainter;
+			sourceTree = "<group>";
+		};
+		E6255F4A1C755D31002A7530 /* TouchPainterTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F4B1C755D31002A7530 /* TouchPainterTests.swift */,
+				E6255F4D1C755D31002A7530 /* Info.plist */,
+			);
+			path = TouchPainterTests;
+			sourceTree = "<group>";
+		};
+		E6255F551C755D31002A7530 /* TouchPainterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F561C755D31002A7530 /* TouchPainterUITests.swift */,
+				E6255F581C755D31002A7530 /* Info.plist */,
+			);
+			path = TouchPainterUITests;
+			sourceTree = "<group>";
+		};
+		E6255F681C756C36002A7530 /* CanvasViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F691C756DD6002A7530 /* CanvasViewController.swift */,
+				E6255F6A1C756DD6002A7530 /* CanvasViewController.xib */,
+			);
+			name = CanvasViewController;
+			sourceTree = "<group>";
+		};
+		E6255F7F1C75A05A002A7530 /* Composite Prototype Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F801C75A079002A7530 /* Mark.swift */,
+				E6255F821C75A3FD002A7530 /* Dot.swift */,
+				E6255F841C75A48D002A7530 /* Vertex.swift */,
+				E6255F861C75A894002A7530 /* Stroke.swift */,
+			);
+			name = "Composite Prototype Iterator";
+			sourceTree = "<group>";
+		};
+		E6255F8A1C75ADBE002A7530 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F8B1C75ADD6002A7530 /* CanvasView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E6255F8E1C75B92F002A7530 /* Factory Method */ = {
+			isa = PBXGroup;
+			children = (
+				E6255F8F1C75B950002A7530 /* CanvasViewGenerator.swift */,
+			);
+			name = "Factory Method";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6255F321C755D31002A7530 /* TouchPainter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6255F5B1C755D31002A7530 /* Build configuration list for PBXNativeTarget "TouchPainter" */;
+			buildPhases = (
+				E6255F2F1C755D31002A7530 /* Sources */,
+				E6255F301C755D31002A7530 /* Frameworks */,
+				E6255F311C755D31002A7530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchPainter;
+			productName = TouchPainter;
+			productReference = E6255F331C755D31002A7530 /* TouchPainter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6255F461C755D31002A7530 /* TouchPainterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6255F5E1C755D31002A7530 /* Build configuration list for PBXNativeTarget "TouchPainterTests" */;
+			buildPhases = (
+				E6255F431C755D31002A7530 /* Sources */,
+				E6255F441C755D31002A7530 /* Frameworks */,
+				E6255F451C755D31002A7530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6255F491C755D31002A7530 /* PBXTargetDependency */,
+			);
+			name = TouchPainterTests;
+			productName = TouchPainterTests;
+			productReference = E6255F471C755D31002A7530 /* TouchPainterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6255F511C755D31002A7530 /* TouchPainterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6255F611C755D31002A7530 /* Build configuration list for PBXNativeTarget "TouchPainterUITests" */;
+			buildPhases = (
+				E6255F4E1C755D31002A7530 /* Sources */,
+				E6255F4F1C755D31002A7530 /* Frameworks */,
+				E6255F501C755D31002A7530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6255F541C755D31002A7530 /* PBXTargetDependency */,
+			);
+			name = TouchPainterUITests;
+			productName = TouchPainterUITests;
+			productReference = E6255F521C755D31002A7530 /* TouchPainterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6255F2B1C755D31002A7530 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Pan Meng";
+				TargetAttributes = {
+					E6255F321C755D31002A7530 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = C46AC59JC9;
+					};
+					E6255F461C755D31002A7530 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = C46AC59JC9;
+						TestTargetID = E6255F321C755D31002A7530;
+					};
+					E6255F511C755D31002A7530 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = C46AC59JC9;
+						TestTargetID = E6255F321C755D31002A7530;
+					};
+				};
+			};
+			buildConfigurationList = E6255F2E1C755D31002A7530 /* Build configuration list for PBXProject "TouchPainter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6255F2A1C755D31002A7530;
+			productRefGroup = E6255F341C755D31002A7530 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6255F321C755D31002A7530 /* TouchPainter */,
+				E6255F461C755D31002A7530 /* TouchPainterTests */,
+				E6255F511C755D31002A7530 /* TouchPainterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6255F311C755D31002A7530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6255F6C1C756DD6002A7530 /* CanvasViewController.xib in Resources */,
+				E6255F411C755D31002A7530 /* LaunchScreen.storyboard in Resources */,
+				E6255F3E1C755D31002A7530 /* Assets.xcassets in Resources */,
+				E6255F3C1C755D31002A7530 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6255F451C755D31002A7530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6255F501C755D31002A7530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6255F2F1C755D31002A7530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6255F901C75B950002A7530 /* CanvasViewGenerator.swift in Sources */,
+				E6255F811C75A079002A7530 /* Mark.swift in Sources */,
+				E6255F391C755D31002A7530 /* ViewController.swift in Sources */,
+				E6255F6B1C756DD6002A7530 /* CanvasViewController.swift in Sources */,
+				E6255F831C75A3FD002A7530 /* Dot.swift in Sources */,
+				E6255F371C755D31002A7530 /* AppDelegate.swift in Sources */,
+				E6255F851C75A48D002A7530 /* Vertex.swift in Sources */,
+				E6255F871C75A894002A7530 /* Stroke.swift in Sources */,
+				E6255F891C75ACE6002A7530 /* Scribble.swift in Sources */,
+				E6255F8C1C75ADD6002A7530 /* CanvasView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6255F431C755D31002A7530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6255F4C1C755D31002A7530 /* TouchPainterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6255F4E1C755D31002A7530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6255F571C755D31002A7530 /* TouchPainterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6255F491C755D31002A7530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6255F321C755D31002A7530 /* TouchPainter */;
+			targetProxy = E6255F481C755D31002A7530 /* PBXContainerItemProxy */;
+		};
+		E6255F541C755D31002A7530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6255F321C755D31002A7530 /* TouchPainter */;
+			targetProxy = E6255F531C755D31002A7530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6255F3A1C755D31002A7530 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6255F3B1C755D31002A7530 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6255F3F1C755D31002A7530 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6255F401C755D31002A7530 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6255F591C755D31002A7530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6255F5A1C755D31002A7530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6255F5C1C755D31002A7530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TouchPainter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mia.TouchPainter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E6255F5D1C755D31002A7530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TouchPainter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mia.TouchPainter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E6255F5F1C755D31002A7530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TouchPainterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mia.TouchPainterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchPainter.app/TouchPainter";
+			};
+			name = Debug;
+		};
+		E6255F601C755D31002A7530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TouchPainterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mia.TouchPainterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchPainter.app/TouchPainter";
+			};
+			name = Release;
+		};
+		E6255F621C755D31002A7530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TouchPainterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mia.TouchPainterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TouchPainter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E6255F631C755D31002A7530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TouchPainterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mia.TouchPainterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TouchPainter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6255F2E1C755D31002A7530 /* Build configuration list for PBXProject "TouchPainter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6255F591C755D31002A7530 /* Debug */,
+				E6255F5A1C755D31002A7530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6255F5B1C755D31002A7530 /* Build configuration list for PBXNativeTarget "TouchPainter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6255F5C1C755D31002A7530 /* Debug */,
+				E6255F5D1C755D31002A7530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E6255F5E1C755D31002A7530 /* Build configuration list for PBXNativeTarget "TouchPainterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6255F5F1C755D31002A7530 /* Debug */,
+				E6255F601C755D31002A7530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E6255F611C755D31002A7530 /* Build configuration list for PBXNativeTarget "TouchPainterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6255F621C755D31002A7530 /* Debug */,
+				E6255F631C755D31002A7530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6255F2B1C755D31002A7530 /* Project object */;
+}
