@@ -1,57 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vlr-3q-LvI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Canvas View Controller-->
-        <scene sceneID="9W4-Mb-7j5">
-            <objects>
-                <viewController id="vlr-3q-LvI" customClass="CanvasViewController" customModule="TouchPainter" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="amQ-sw-3Dn"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hfc-cd-aMd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="a8L-8W-erL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLN-u8-ekn">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gPq-UJ-fZ2"/>
-                                    <barButtonItem systemItem="trash" id="4E0-fK-qDE"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7p9-K3-b9e"/>
-                                    <barButtonItem image="save" id="PNd-kb-arg"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vbK-wH-hge"/>
-                                    <barButtonItem image="open" id="MfR-hn-fBs"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1r2-OY-ZIz"/>
-                                    <barButtonItem image="palette" id="nHC-KY-46y"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lR9-gp-L3U"/>
-                                    <barButtonItem image="undo" id="iBe-ye-cV1"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ckO-V7-u94"/>
-                                    <barButtonItem image="redo" id="8a6-yx-sjX"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nrj-V9-5SO"/>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fLN-u8-ekn" firstAttribute="bottom" secondItem="Hfc-cd-aMd" secondAttribute="top" id="OlB-qI-6Lp"/>
-                            <constraint firstItem="fLN-u8-ekn" firstAttribute="leading" secondItem="a8L-8W-erL" secondAttribute="leading" id="XWu-Pp-Vov"/>
-                            <constraint firstAttribute="trailing" secondItem="fLN-u8-ekn" secondAttribute="trailing" id="aHd-pT-CoW"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vPs-Qp-XJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-203" y="361"/>
-        </scene>
-        <!--View Controller-->
+        <!--Coordinating Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchPainter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CoordinatingController" customModule="TouchPainter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -64,13 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="228" y="206"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="open" width="24" height="24"/>
-        <image name="palette" width="24" height="20"/>
-        <image name="redo" width="24" height="24"/>
-        <image name="save" width="24" height="24"/>
-        <image name="undo" width="24" height="24"/>
-    </resources>
 </document>

@@ -24,9 +24,17 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JvS-PM-F1r"/>
                         <barButtonItem image="save" id="sCp-aT-KfA"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eRy-uD-oyb"/>
-                        <barButtonItem image="open" id="2PO-3F-9rX"/>
+                        <barButtonItem tag="2" image="open" id="2PO-3F-9rX">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="PSo-tl-5lt" id="wau-Ni-nHN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="6YE-Hg-kmT"/>
-                        <barButtonItem image="palette" id="YRQ-ER-kiV"/>
+                        <barButtonItem tag="1" image="palette" id="YRQ-ER-kiV">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="PSo-tl-5lt" id="SKK-Ae-3cR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="KZm-eC-3y7"/>
                         <barButtonItem image="undo" id="Qxs-WD-FcP"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="laU-rR-fqE"/>
@@ -43,6 +51,7 @@
             </constraints>
             <point key="canvasLocation" x="262" y="430"/>
         </view>
+        <customObject id="PSo-tl-5lt" customClass="CoordinatingController" customModule="TouchPainter" customModuleProvider="target"/>
     </objects>
     <resources>
         <image name="open" width="24" height="24"/>

@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let coordinatingController = CoordinatingController.sharedCoordinator
+        window?.addSubview((coordinatingController.activeViewController?.view)!)
+//        let controller = CanvasViewController(nibName:"CanvasViewController", bundle:nil)
+//        window?.addSubview(controller.view)
+        window?.makeKeyAndVisible()
         return true
     }
 
