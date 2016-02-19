@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E6255F371C755D31002A7530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F361C755D31002A7530 /* AppDelegate.swift */; };
-		E6255F3C1C755D31002A7530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6255F3A1C755D31002A7530 /* Main.storyboard */; };
 		E6255F3E1C755D31002A7530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6255F3D1C755D31002A7530 /* Assets.xcassets */; };
 		E6255F411C755D31002A7530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6255F3F1C755D31002A7530 /* LaunchScreen.storyboard */; };
 		E6255F4C1C755D31002A7530 /* TouchPainterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F4B1C755D31002A7530 /* TouchPainterTests.swift */; };
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		E6255F331C755D31002A7530 /* TouchPainter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchPainter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6255F361C755D31002A7530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6255F3B1C755D31002A7530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6255F3D1C755D31002A7530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6255F401C755D31002A7530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6255F421C755D31002A7530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				E6255F8E1C75B92F002A7530 /* Factory Method */,
 				E6255F681C756C36002A7530 /* CanvasViewController */,
 				E6255F8A1C75ADBE002A7530 /* Views */,
-				E6255F3A1C755D31002A7530 /* Main.storyboard */,
 				E6255F3D1C755D31002A7530 /* Assets.xcassets */,
 				E6255F3F1C755D31002A7530 /* LaunchScreen.storyboard */,
 				E6255F421C755D31002A7530 /* Info.plist */,
@@ -307,7 +304,6 @@
 				E6255F411C755D31002A7530 /* LaunchScreen.storyboard in Resources */,
 				E6255F3E1C755D31002A7530 /* Assets.xcassets in Resources */,
 				E6C3C23D1C76F77C00C5E6C8 /* PaletteViewController.xib in Resources */,
-				E6255F3C1C755D31002A7530 /* Main.storyboard in Resources */,
 				E6C3C2411C76F79900C5E6C8 /* ThumbnailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,14 +376,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E6255F3A1C755D31002A7530 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6255F3B1C755D31002A7530 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E6255F3F1C755D31002A7530 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
