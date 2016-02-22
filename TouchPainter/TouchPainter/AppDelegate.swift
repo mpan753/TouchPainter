@@ -18,9 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let coordinatingController = CoordinatingController.sharedCoordinator
-        window?.rootViewController = coordinatingController
+        window!.rootViewController = coordinatingController.activeViewController!
         window?.backgroundColor = UIColor.whiteColor()
-        window?.addSubview((coordinatingController.activeViewController?.view)!)
         window?.makeKeyAndVisible()
         return true
     }

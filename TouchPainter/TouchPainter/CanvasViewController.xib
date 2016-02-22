@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CanvasViewController" customModule="TouchPainter" customModuleProvider="target">
             <connections>
+                <outlet property="coordinatingController" destination="Nci-AS-nOW" id="UXq-N8-n4Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,13 +26,13 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eRy-uD-oyb"/>
                         <barButtonItem tag="2" image="open" id="2PO-3F-9rX">
                             <connections>
-                                <action selector="requestViewChangeByObject:" destination="PSo-tl-5lt" id="wau-Ni-nHN"/>
+                                <action selector="requestViewChangeByObject:" destination="Nci-AS-nOW" id="TiI-S2-l9F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="6YE-Hg-kmT"/>
                         <barButtonItem tag="1" image="palette" id="YRQ-ER-kiV">
                             <connections>
-                                <action selector="requestViewChangeByObject:" destination="PSo-tl-5lt" id="SKK-Ae-3cR"/>
+                                <action selector="requestViewChangeByObject:" destination="Nci-AS-nOW" id="vDc-qH-IJF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="KZm-eC-3y7"/>
@@ -51,7 +52,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="262" y="430"/>
         </view>
-        <customObject id="PSo-tl-5lt" customClass="CoordinatingController" customModule="TouchPainter" customModuleProvider="target"/>
+        <customObject id="Nci-AS-nOW" customClass="CoordinatingController" customModule="TouchPainter"/>
     </objects>
     <resources>
         <image name="open" width="24" height="24"/>

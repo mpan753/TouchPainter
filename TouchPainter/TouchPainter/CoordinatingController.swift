@@ -20,9 +20,9 @@ class CoordinatingController: UIViewController {
     var activeViewController:UIViewController?
     
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        canvasViewController = CanvasViewController(nibName: "CanvasViewController", bundle:nil)
-        activeViewController = canvasViewController
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        canvasViewController = CanvasViewController()
+        activeViewController = canvasViewController
     }
 
     class var sharedCoordinator:CoordinatingController {
@@ -40,7 +40,6 @@ class CoordinatingController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        self.view.addSubview(CanvasViewController().view)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,23 +58,38 @@ class CoordinatingController: UIViewController {
     }
     */
 
+//    func requestViewChangeByObject(sender: AnyObject) {
+//        print("\(__FUNCTION__)")
+//    }
     @IBAction func requestViewChangeByObject(object:AnyObject) {
+        print("\(__FUNCTION__)")
         if object.isKindOfClass(UIBarButtonItem) {
             switch ButtonTag.RawValue(object.tag) {
             case ButtonTag.kButtonTagOpenPaletteView.rawValue:
+                print("PaletteViewController")
                 let controller = PaletteViewController()
-                canvasViewController?.presentViewController(controller, animated: true, completion: nil)
+                if let vc = UIApplication.sharedApplication().keyWindow!.rootViewController {
+                    vc.presentViewController(controller, animated: true, completion: nil)
+                }
                 activeViewController = controller
-                break
             case ButtonTag.kButtonTagOpenThumbnailView.rawValue:
+                print("ThumbnailViewController")
                 let controller = ThumbnailViewController()
-                canvasViewController?.presentViewController(controller, animated: true, completion: nil)
+                if let vc = UIApplication.sharedApplication().keyWindow!.rootViewController {
+                    vc.presentViewController(controller, animated: true, completion: nil)
+                }
                 activeViewController = controller
-                break
             default:
-                
-                break
+                if let vc = UIApplication.sharedApplication().keyWindow!.rootViewController {
+                    vc.dismissViewControllerAnimated(true, completion: nil)
+                }
+                activeViewController = canvasViewController
             }
+        } else {
+            if let vc = UIApplication.sharedApplication().keyWindow!.rootViewController {
+                vc.dismissViewControllerAnimated(true, completion: nil)
+            }
+            activeViewController = canvasViewController
         }
     }
     

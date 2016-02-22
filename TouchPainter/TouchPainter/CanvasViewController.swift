@@ -14,6 +14,8 @@ class CanvasViewController: UIViewController {
     var strokeColor:UIColor?
     var strokeSize:Float?
     
+    @IBOutlet var coordinatingController: CoordinatingController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaultGenerator = CanvasViewGenerator()
@@ -32,7 +34,10 @@ class CanvasViewController: UIViewController {
         self.canvasView = generator.canvasViewWithFrame(CGRect(x: 0,y: 0,width: 320,height: 436))
         self.view.addSubview(self.canvasView!)
     }
-    
+
+//    @IBAction func requestChangeBtObjecgt(sender: AnyObject) {
+//        coordinatingController.requestViewChangeByObject(sender)
+//    }
     /*
     // MARK: - Navigation
 
