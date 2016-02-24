@@ -7,10 +7,13 @@
 //
 
 import UIKit
-@objc protocol Mark {
+protocol Mark <NSObject> {
 //    var lastChild:Mark{get set}
+    var color: UIColor?{get set}
+    var location: CGPoint {get set}
+    var size: Float {get set}
     
-    optional func addMark(child:Mark)
-    optional func removeMark(child:Mark)
+    func addMark(child:Mark)
+    func removeMark(child:Mark)
 }
 

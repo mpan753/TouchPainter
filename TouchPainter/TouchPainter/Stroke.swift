@@ -9,11 +9,20 @@
 import UIKit
 
 class Stroke: Mark {
-    var color:UIColor = UIColor()
-    var size:Float = 0
-    var children:[Vertex] = []
+
+    var size:Float
+    var children:[Mark]?
     init() {
-        
+        children = []
     }
     
+    func addMark(child: Mark) {
+        children!.append(child)
+    }
+    
+    func removeMark(child: Mark) {
+        if (children! as NSMutableArray).containsObject(child) {
+            
+        }
+    }
 }

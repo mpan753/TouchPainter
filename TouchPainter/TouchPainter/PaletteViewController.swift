@@ -12,8 +12,6 @@ class PaletteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
-        print("\(__FUNCTION__)")
         // Do any additional setup after loading the view.
     }
 
