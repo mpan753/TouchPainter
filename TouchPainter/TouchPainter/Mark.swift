@@ -7,13 +7,14 @@
 //
 
 import UIKit
-protocol Mark <NSObject> {
-//    var lastChild:Mark{get set}
-    var color: UIColor?{get set}
-    var location: CGPoint {get set}
-    var size: Float {get set}
+protocol Mark : AnyObject {
+//    var lastChild:Mark{get}
+//    var color: UIColor?{get set}
+//    var location: CGPoint {get set}
+//    var size: Float {get set}
     
     func addMark(child:Mark)
     func removeMark(child:Mark)
+//    func acceptMarkVisitor(visitor: MarkVisitor)
 }
 

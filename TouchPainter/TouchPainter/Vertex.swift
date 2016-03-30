@@ -9,9 +9,19 @@
 import UIKit
 
 class Vertex: Mark {
-    var location:CGPoint = CGPoint()
-    
+    var location: CGPoint?
     init() {
-         
+        
+    }
+    init(location: CGPoint) {
+        self.location! = location
+    }
+    
+    func addMark(child: Mark) {
+        
+    }
+    
+    func removeMark(child: Mark) {
+        
     }
 }

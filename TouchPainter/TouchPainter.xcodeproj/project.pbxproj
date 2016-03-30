@@ -21,6 +21,8 @@
 		E6255F891C75ACE6002A7530 /* Scribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F881C75ACE6002A7530 /* Scribble.swift */; };
 		E6255F8C1C75ADD6002A7530 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F8B1C75ADD6002A7530 /* CanvasView.swift */; };
 		E6255F901C75B950002A7530 /* CanvasViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6255F8F1C75B950002A7530 /* CanvasViewGenerator.swift */; };
+		E647C6271CABD5D300194BF1 /* CommandBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647C6261CABD5D300194BF1 /* CommandBarButton.swift */; };
+		E647C62A1CABD63100194BF1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647C6291CABD63100194BF1 /* Command.swift */; };
 		E6C3C2391C76BB9B00C5E6C8 /* CoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3C2381C76BB9B00C5E6C8 /* CoordinatingController.swift */; };
 		E6C3C23C1C76F77C00C5E6C8 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3C23A1C76F77C00C5E6C8 /* PaletteViewController.swift */; };
 		E6C3C23D1C76F77C00C5E6C8 /* PaletteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C3C23B1C76F77C00C5E6C8 /* PaletteViewController.xib */; };
@@ -66,6 +68,8 @@
 		E6255F881C75ACE6002A7530 /* Scribble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scribble.swift; sourceTree = "<group>"; };
 		E6255F8B1C75ADD6002A7530 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		E6255F8F1C75B950002A7530 /* CanvasViewGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewGenerator.swift; sourceTree = "<group>"; };
+		E647C6261CABD5D300194BF1 /* CommandBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandBarButton.swift; sourceTree = "<group>"; };
+		E647C6291CABD63100194BF1 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		E6C3C2381C76BB9B00C5E6C8 /* CoordinatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatingController.swift; sourceTree = "<group>"; };
 		E6C3C23A1C76F77C00C5E6C8 /* PaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 		E6C3C23B1C76F77C00C5E6C8 /* PaletteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaletteViewController.xib; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		E6255F351C755D31002A7530 /* TouchPainter */ = {
 			isa = PBXGroup;
 			children = (
+				E647C6281CABD61A00194BF1 /* Command */,
+				E647C6251CABD5A400194BF1 /* Utilities */,
 				E6255F361C755D31002A7530 /* AppDelegate.swift */,
 				E6C3C2381C76BB9B00C5E6C8 /* CoordinatingController.swift */,
 				E6C3C23A1C76F77C00C5E6C8 /* PaletteViewController.swift */,
@@ -191,6 +197,22 @@
 				E6255F8F1C75B950002A7530 /* CanvasViewGenerator.swift */,
 			);
 			name = "Factory Method";
+			sourceTree = "<group>";
+		};
+		E647C6251CABD5A400194BF1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E647C6261CABD5D300194BF1 /* CommandBarButton.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E647C6281CABD61A00194BF1 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				E647C6291CABD63100194BF1 /* Command.swift */,
+			);
+			name = Command;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,11 +356,13 @@
 				E6255F6B1C756DD6002A7530 /* CanvasViewController.swift in Sources */,
 				E6255F831C75A3FD002A7530 /* Dot.swift in Sources */,
 				E6255F371C755D31002A7530 /* AppDelegate.swift in Sources */,
+				E647C6271CABD5D300194BF1 /* CommandBarButton.swift in Sources */,
 				E6255F851C75A48D002A7530 /* Vertex.swift in Sources */,
 				E6255F871C75A894002A7530 /* Stroke.swift in Sources */,
 				E6255F891C75ACE6002A7530 /* Scribble.swift in Sources */,
 				E6C3C2391C76BB9B00C5E6C8 /* CoordinatingController.swift in Sources */,
 				E6255F8C1C75ADD6002A7530 /* CanvasView.swift in Sources */,
+				E647C62A1CABD63100194BF1 /* Command.swift in Sources */,
 				E6C3C23C1C76F77C00C5E6C8 /* PaletteViewController.swift in Sources */,
 				E6C3C2401C76F79900C5E6C8 /* ThumbnailViewController.swift in Sources */,
 			);

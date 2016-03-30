@@ -35,17 +35,16 @@ class CanvasViewController: UIViewController {
         self.view.addSubview(self.canvasView!)
     }
 
-//    @IBAction func requestChangeBtObjecgt(sender: AnyObject) {
-//        coordinatingController.requestViewChangeByObject(sender)
-//    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onBarButtonHit(sender: UIBarButtonItem) {
+        if sender.tag == 4 {
+            undoManager?.undo()
+        } else if sender.tag == 5 {
+            undoManager?.redo()
+        }
     }
-    */
+
+    @IBAction func onCustomBarButtonHit(sender: CommandBarButton) {
+        sender.command?.execute()
+    }
 
 }

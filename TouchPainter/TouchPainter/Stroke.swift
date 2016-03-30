@@ -8,21 +8,22 @@
 
 import UIKit
 
-class Stroke: Mark {
-
-    var size:Float
-    var children:[Mark]?
+class Stroke : Mark {
+ 
+    var size: Float?
+    var color: UIColor?
+    var children: NSMutableArray?
     init() {
-        children = []
+        self.children! = []
     }
     
     func addMark(child: Mark) {
-        children!.append(child)
+        children!.addObject(child)
     }
     
     func removeMark(child: Mark) {
-        if (children! as NSMutableArray).containsObject(child) {
-            
+        if children!.containsObject(child) {
+            children!.removeObject(child)
         }
     }
 }

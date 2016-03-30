@@ -62,7 +62,6 @@ class CoordinatingController: UIViewController {
 //        print("\(__FUNCTION__)")
 //    }
     @IBAction func requestViewChangeByObject(object:AnyObject) {
-        print("\(__FUNCTION__)")
         if object.isKindOfClass(UIBarButtonItem) {
             switch ButtonTag.RawValue(object.tag) {
             case ButtonTag.kButtonTagOpenPaletteView.rawValue:

@@ -20,9 +20,17 @@
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Y6Y-kA-bsP"/>
-                        <barButtonItem systemItem="trash" id="4VG-6m-IV5"/>
+                        <barButtonItem systemItem="trash" id="4VG-6m-IV5" customClass="CommandBarButton" customModule="TouchPainter" customModuleProvider="target">
+                            <connections>
+                                <action selector="onCustomBarButtonHit:" destination="-1" id="bcr-3d-kCt"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JvS-PM-F1r"/>
-                        <barButtonItem image="save" id="sCp-aT-KfA"/>
+                        <barButtonItem image="save" id="sCp-aT-KfA" customClass="CommandBarButton" customModule="TouchPainter" customModuleProvider="target">
+                            <connections>
+                                <action selector="onCustomBarButtonHit:" destination="-1" id="Jb5-wO-fgc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eRy-uD-oyb"/>
                         <barButtonItem tag="2" image="open" id="2PO-3F-9rX">
                             <connections>
@@ -36,9 +44,17 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="KZm-eC-3y7"/>
-                        <barButtonItem image="undo" id="Qxs-WD-FcP"/>
+                        <barButtonItem tag="4" image="undo" id="Qxs-WD-FcP">
+                            <connections>
+                                <action selector="onBarButtonHit:" destination="-1" id="BkP-c5-MnZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="laU-rR-fqE"/>
-                        <barButtonItem image="redo" id="04R-Lp-957"/>
+                        <barButtonItem tag="5" image="redo" id="04R-Lp-957">
+                            <connections>
+                                <action selector="onBarButtonHit:" destination="-1" id="nhL-7l-Zax"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="NXP-vK-agR"/>
                     </items>
                 </toolbar>

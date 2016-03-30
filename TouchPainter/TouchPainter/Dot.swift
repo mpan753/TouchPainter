@@ -9,11 +9,14 @@
 import UIKit
 
 class Dot: Vertex {
-    var color:UIColor
-    var size:Float
+    var color: UIColor?
+    var size: Float?
     
     init(color:UIColor, size:Float) {
         self.color = color
         self.size = size
+        super.init()
     }
+    
+    
 }
