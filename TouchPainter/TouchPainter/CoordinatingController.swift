@@ -65,14 +65,14 @@ class CoordinatingController: UIViewController {
         if object.isKindOfClass(UIBarButtonItem) {
             switch ButtonTag.RawValue(object.tag) {
             case ButtonTag.kButtonTagOpenPaletteView.rawValue:
-                print("PaletteViewController")
+
                 let controller = PaletteViewController()
                 if let vc = UIApplication.sharedApplication().keyWindow!.rootViewController {
                     vc.presentViewController(controller, animated: true, completion: nil)
                 }
                 activeViewController = controller
             case ButtonTag.kButtonTagOpenThumbnailView.rawValue:
-                print("ThumbnailViewController")
+
                 let controller = ThumbnailViewController()
                 if let vc = UIApplication.sharedApplication().keyWindow!.rootViewController {
                     vc.presentViewController(controller, animated: true, completion: nil)

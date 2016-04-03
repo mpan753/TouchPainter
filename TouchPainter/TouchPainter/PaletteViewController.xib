@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaletteViewController" customModule="TouchPainter" customModuleProvider="target">
             <connections>
+                <outlet property="blueSlider" destination="Af4-ln-N67" id="xts-E7-uDL"/>
                 <outlet property="coordinatingController" destination="jc0-qw-9x5" id="S4I-Yu-G50"/>
+                <outlet property="greenSlider" destination="TTC-rt-pL5" id="RFK-ER-3Di"/>
+                <outlet property="paletteView" destination="0IB-h6-XVO" id="MXJ-yZ-14x"/>
+                <outlet property="redSlider" destination="dTg-SH-2E2" id="k1R-Bs-w87"/>
+                <outlet property="sizeSlider" destination="QEa-Nx-vPU" id="Ln9-D5-gSj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,28 +24,40 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Stroke Color" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mpv-F5-qKt">
                     <rect key="frame" x="136" y="72" width="103" height="21"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="G" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-GW-nAP">
                     <rect key="frame" x="63" y="137" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TTC-rt-pL5">
-                    <rect key="frame" x="91" y="137" width="209" height="31"/>
-                </slider>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-SH-2E2">
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-SH-2E2" customClass="CommandSlider" customModule="TouchPainter" customModuleProvider="target">
                     <rect key="frame" x="91" y="107" width="209" height="31"/>
+                    <connections>
+                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="Vui-UF-BTa"/>
+                        <outlet property="command" destination="LeT-ed-pwb" id="NHt-hM-8OX"/>
+                    </connections>
                 </slider>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Af4-ln-N67">
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TTC-rt-pL5" customClass="CommandSlider" customModule="TouchPainter" customModuleProvider="target">
+                    <rect key="frame" x="91" y="137" width="209" height="31"/>
+                    <connections>
+                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="vIg-zS-aAN"/>
+                        <outlet property="command" destination="LeT-ed-pwb" id="g9c-Cg-ghr"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Af4-ln-N67" customClass="CommandSlider" customModule="TouchPainter" customModuleProvider="target">
                     <rect key="frame" x="91" y="167" width="209" height="31"/>
+                    <connections>
+                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="aNj-g5-Uq4"/>
+                        <outlet property="command" destination="LeT-ed-pwb" id="mUh-Cv-4Ik"/>
+                    </connections>
                 </slider>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GdI-ny-8VH">
                     <rect key="frame" x="63" y="167" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <navigationBar opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgM-Do-JZa">
@@ -55,12 +72,16 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="5" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="QEa-Nx-vPU">
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="5" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="QEa-Nx-vPU" customClass="CommandSlider" customModule="TouchPainter" customModuleProvider="target">
                     <rect key="frame" x="91" y="371" width="209" height="31"/>
+                    <connections>
+                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="ivA-ml-QyS"/>
+                        <outlet property="command" destination="teG-E6-oTd" id="Fcq-UI-P8q"/>
+                    </connections>
                 </slider>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0IB-h6-XVO">
                     <rect key="frame" x="78" y="209" width="236" height="76"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="small_dot" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-oH-hcc">
                     <rect key="frame" x="63" y="375" width="18" height="22"/>
@@ -68,13 +89,13 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Stroke Size" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BGL-WB-xF0">
                     <rect key="frame" x="141" y="341" width="93" height="21"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="R" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iSD-gJ-XXl">
                     <rect key="frame" x="63" y="110" width="42" height="21"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="large_dot" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-GL-Zm9">
@@ -85,9 +106,11 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
         <customObject id="jc0-qw-9x5" customClass="CoordinatingController" customModule="TouchPainter" customModuleProvider="target"/>
+        <customObject id="LeT-ed-pwb" customClass="SetStrokeColorCommand" customModule="TouchPainter" customModuleProvider="target"/>
+        <customObject id="teG-E6-oTd" customClass="SetStrokeSizeCommand" customModule="TouchPainter" customModuleProvider="target"/>
     </objects>
     <resources>
         <image name="large_dot" width="95" height="100"/>
-        <image name="small_dot" width="24" height="24"/>
+        <image name="small_dot" width="62" height="58"/>
     </resources>
 </document>
