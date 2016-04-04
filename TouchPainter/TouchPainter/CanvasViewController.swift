@@ -9,19 +9,41 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
+    private var _scribble : Scribble?
     var canvasView:CanvasView?
-    var scribble:Scribble?
+    var scribble:Scribble? {
+        set {
+            if scribble != newValue {
+                scribble?.removeObserver(self, forKeyPath: "mark")
+                _scribble = newValue
+                scribble?.addObserver(self, forKeyPath: "mark", options: NSKeyValueObservingOptions.New.union( NSKeyValueObservingOptions.Initial), context: nil)
+            }
+        }
+        get {
+            return _scribble
+        }
+    }
     var strokeColor:UIColor?
     var strokeSize:Float?
+    
+    var startPoint : CGPoint?
     
     @IBOutlet var coordinatingController: CoordinatingController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaultGenerator = CanvasViewGenerator()
-        
         // Do any additional setup after loading the view.
+        
+        let defaultGenerator = CanvasViewGenerator()
         self.loadCanvasViewWithGenerator(defaultGenerator)
+        
+        scribble = Scribble()
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let red = userDefaults.floatForKey("red")
+        let green = userDefaults.floatForKey("green")
+        let blue = userDefaults.floatForKey("blue")
+        strokeColor = UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: 1)
+        strokeSize = userDefaults.floatForKey("size")
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +57,50 @@ class CanvasViewController: UIViewController {
         self.view.addSubview(self.canvasView!)
     }
 
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch : UITouch = touches.first!
+        startPoint = touch.locationInView(self.canvasView)
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch : UITouch = touches.first!
+        let previousPoint = touch.previousLocationInView(self.canvasView)
+        if CGPointEqualToPoint(startPoint!, previousPoint) {
+            let stroke = Stroke()
+            stroke.color = strokeColor
+            stroke.size = strokeSize
+            scribble?.addMark(stroke, shouldAddToPreviousMark: false)
+        }
+        let currentPoint = touch.locationInView(self.canvasView)
+        let vertex = Vertex(location: currentPoint)
+        scribble?.addMark(vertex, shouldAddToPreviousMark: true)
+        
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch : UITouch = touches.first!
+        let currentPoint: CGPoint = touch.locationInView(self.canvasView)
+        if CGPointEqualToPoint(startPoint!, currentPoint) {
+            let dot = Dot(color: strokeColor!, size: strokeSize!)
+            scribble?.addMark(dot, shouldAddToPreviousMark: false)
+        }
+        startPoint = CGPointZero
+    }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        startPoint = CGPointZero
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if object?.isKindOfClass(Scribble) == true && keyPath! == "mark" {
+            let mark : Mark = change![NSKeyValueChangeNewKey] as! Mark
+            canvasView?.mark = mark
+            canvasView?.setNeedsDisplay()
+        }
+    }
+    
     @IBAction func onBarButtonHit(sender: UIBarButtonItem) {
         if sender.tag == 4 {
             undoManager?.undo()

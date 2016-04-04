@@ -17,11 +17,19 @@ class Vertex: Mark {
         self.location! = location
     }
     
+    var lastChild: Mark? {
+        return nil
+    }
+    
     func addMark(child: Mark) {
         
     }
     
     func removeMark(child: Mark) {
+        
+    }
+    
+    func acceptMarkVisitor(visitor: MarkVisitor) {
         
     }
 }

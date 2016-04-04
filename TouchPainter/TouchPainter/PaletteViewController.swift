@@ -23,6 +23,7 @@ class PaletteViewController: UIViewController, SetStrokeColorCommandDelegate, Se
         redSlider.value = userDefault.floatForKey("red")
         greenSlider.value = userDefault.floatForKey("green")
         blueSlider.value = userDefault.floatForKey("blue")
+        sizeSlider.value = userDefault.floatForKey("size")
         paletteView.backgroundColor = UIColor(colorLiteralRed: redSlider.value, green: greenSlider.value, blue: blueSlider.value, alpha: 1)
         (redSlider.command as! SetStrokeColorCommand).delegate = self
         (greenSlider.command as! SetStrokeColorCommand).delegate = self
@@ -32,9 +33,10 @@ class PaletteViewController: UIViewController, SetStrokeColorCommandDelegate, Se
 
     override func viewDidDisappear(animated: Bool) {
         let userDefault = NSUserDefaults.standardUserDefaults()
-        userDefault.setValue(redSlider.value, forKey: "red")
-        userDefault.setValue(greenSlider.value, forKey: "green")
-        userDefault.setValue(blueSlider.value, forKey: "blue")
+        userDefault.setFloat(redSlider.value, forKey: "red")
+        userDefault.setFloat(greenSlider.value, forKey: "green")
+        userDefault.setFloat(blueSlider.value, forKey: "blue")
+        userDefault.setFloat(sizeSlider.value, forKey: "size")
     }
     
     override func didReceiveMemoryWarning() {

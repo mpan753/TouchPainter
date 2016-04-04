@@ -18,5 +18,7 @@ class Dot: Vertex {
         super.init()
     }
     
-    
+    override func acceptMarkVisitor(visitor: MarkVisitor) {
+        (visitor as! MarkRenderer).visitDot(self)
+    }
 }

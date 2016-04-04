@@ -8,13 +8,13 @@
 
 import UIKit
 protocol Mark : AnyObject {
-//    var lastChild:Mark{get}
+    var lastChild : Mark?{get}
 //    var color: UIColor?{get set}
 //    var location: CGPoint {get set}
 //    var size: Float {get set}
     
-    func addMark(child:Mark)
-    func removeMark(child:Mark)
-//    func acceptMarkVisitor(visitor: MarkVisitor)
+    func addMark(child : Mark)
+    func removeMark(child : Mark)
+    func acceptMarkVisitor(visitor : MarkVisitor)
 }
 

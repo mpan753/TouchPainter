@@ -8,10 +8,25 @@
 
 import UIKit
 
-class Scribble {
-//    var parentMark:Mark
-//    var incrementalMark:Mark
-//    init() {
-//        
-//    }
+class Scribble : NSObject {
+
+    var parentMark : Mark
+    var mark : Mark
+    var incrementalMark : Mark?
+    override init() {
+        parentMark = Stroke()
+        mark = parentMark
+        super.init()
+    }
+    
+    func addMark(aMark: Mark, shouldAddToPreviousMark: Bool) {
+        self.willChangeValueForKey("mark")
+        if shouldAddToPreviousMark {
+            parentMark.lastChild?.addMark(aMark)
+        } else {
+            parentMark.addMark(aMark)
+        }
+        self.didChangeValueForKey("mark")
+    }
+    
 }

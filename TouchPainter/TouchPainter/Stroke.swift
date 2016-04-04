@@ -14,7 +14,11 @@ class Stroke : Mark {
     var color: UIColor?
     var children: NSMutableArray?
     init() {
-        self.children! = []
+        self.children = NSMutableArray()
+    }
+    
+    var lastChild: Mark? {
+        return children?.lastObject as! Mark?
     }
     
     func addMark(child: Mark) {
@@ -25,5 +29,9 @@ class Stroke : Mark {
         if children!.containsObject(child) {
             children!.removeObject(child)
         }
+    }
+    
+    func acceptMarkVisitor(visitor: MarkVisitor) {
+        
     }
 }
