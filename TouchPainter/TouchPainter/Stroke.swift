@@ -32,6 +32,6 @@ class Stroke : Mark {
     }
     
     func acceptMarkVisitor(visitor: MarkVisitor) {
-        
+        (visitor as! MarkRenderer).visitStroke(self)
     }
 }

@@ -9,25 +9,13 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
-    private var _scribble : Scribble?
+
     var canvasView:CanvasView?
-    var scribble:Scribble? {
-        set {
-            if scribble != newValue {
-                scribble?.removeObserver(self, forKeyPath: "mark")
-                _scribble = newValue
-                scribble?.addObserver(self, forKeyPath: "mark", options: NSKeyValueObservingOptions.New.union( NSKeyValueObservingOptions.Initial), context: nil)
-            }
-        }
-        get {
-            return _scribble
-        }
-    }
+    var scribble:Scribble?
     var strokeColor:UIColor?
     var strokeSize:Float?
     
     var startPoint : CGPoint?
-    
     @IBOutlet var coordinatingController: CoordinatingController!
     
     override func viewDidLoad() {
@@ -38,6 +26,8 @@ class CanvasViewController: UIViewController {
         self.loadCanvasViewWithGenerator(defaultGenerator)
         
         scribble = Scribble()
+//        scribble?.addObserver(self, forKeyPath: "mark", options:.New, context: &myContext)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"observeValueChangeForMark:", name:didChangeValueForMarkNotification, object:nil)
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let red = userDefaults.floatForKey("red")
         let green = userDefaults.floatForKey("green")
@@ -45,7 +35,11 @@ class CanvasViewController: UIViewController {
         strokeColor = UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: 1)
         strokeSize = userDefaults.floatForKey("size")
     }
-
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -94,12 +88,17 @@ class CanvasViewController: UIViewController {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if object?.isKindOfClass(Scribble) == true && keyPath! == "mark" {
-            let mark : Mark = change![NSKeyValueChangeNewKey] as! Mark
-            canvasView?.mark = mark
-            canvasView?.setNeedsDisplay()
-        }
+//        if object?.isKindOfClass(Scribble) == true && keyPath! == "mark" {
+//        if context == &myContext {
+//            if let mark = change?[NSKeyValueChangeNewKey] {
+//                print(mark)
+//                canvasView?.mark = mark as? Mark
+//                canvasView?.setNeedsDisplay()
+//            }
+//        }
     }
+    
+    
     
     @IBAction func onBarButtonHit(sender: UIBarButtonItem) {
         if sender.tag == 4 {
@@ -113,4 +112,11 @@ class CanvasViewController: UIViewController {
         sender.command?.execute()
     }
 
+    func observeValueChangeForMark(note : NSNotification) {
+//        print("\(__FUNCTION__)")
+        let mark = note.userInfo!["mark"] as! Mark
+        canvasView?.mark = mark
+        canvasView?.setNeedsDisplay()
+    }
+    
 }

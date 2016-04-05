@@ -8,25 +8,37 @@
 
 import UIKit
 
-class Scribble : NSObject {
+public let didChangeValueForMarkNotification : String = "didChangeValueForMarkNotification"
 
-    var parentMark : Mark
-    var mark : Mark
+class Scribble : NSObject {
+    private var parentMark : Mark
+    var mark : Mark {
+        set {
+            parentMark = newValue
+        }
+
+        get {
+            return parentMark
+        }
+    }
+    
+    var array : NSMutableArray = NSMutableArray()
+    
     var incrementalMark : Mark?
     override init() {
         parentMark = Stroke()
-        mark = parentMark
         super.init()
-    }
     
+    }
     func addMark(aMark: Mark, shouldAddToPreviousMark: Bool) {
-        self.willChangeValueForKey("mark")
+//        self.willChangeValueForKey("mark")
         if shouldAddToPreviousMark {
-            parentMark.lastChild?.addMark(aMark)
+            mark.lastChild?.addMark(aMark)
         } else {
-            parentMark.addMark(aMark)
+            mark.addMark(aMark)
         }
-        self.didChangeValueForKey("mark")
+//        self.didChangeValueForKey("mark")
+        NSNotificationCenter.defaultCenter().postNotificationName(didChangeValueForMarkNotification, object:self, userInfo:["mark" : mark])
     }
     
 }

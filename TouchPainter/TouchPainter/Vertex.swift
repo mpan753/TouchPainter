@@ -14,7 +14,7 @@ class Vertex: Mark {
         
     }
     init(location: CGPoint) {
-        self.location! = location
+        self.location = location
     }
     
     var lastChild: Mark? {
@@ -30,6 +30,6 @@ class Vertex: Mark {
     }
     
     func acceptMarkVisitor(visitor: MarkVisitor) {
-        
+        (visitor as! MarkRenderer).visitVertex(self)
     }
 }

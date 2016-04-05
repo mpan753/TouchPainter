@@ -16,4 +16,3 @@ protocol MarkVisitor {
     func visitStroke(stroke: Stroke)
     
 }
-
